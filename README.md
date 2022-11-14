@@ -1,6 +1,9 @@
 <h1>Hugen</h1>
 
-Hugen is a tool for generating data for PostgreSQL. This tool supports several modes:
+Hugen is a tool for generating data for PostgreSQL. The result is a logical dump file, that you can process by using 
+pg_dump. More about here - https://www.postgresql.org/docs/current/app-pgdump.html.
+
+This tool supports several modes:
 
 <h5>- Generating by size</h5>
 
@@ -12,7 +15,9 @@ For example: `--size=9.5GB`
 You can generate a script to create a database of the desired number of schemas, tables and rows by using the command:                                    
 `--filepath={path_to_file}/generation_schema.txt`
 
-                        
+
+
+```                        
     ------------------------------------------------------------------------------------------------------------                                                                          
     generation_schema.txt                                                         
     ------------------------------------------------------------------------------------------------------------
@@ -26,7 +31,7 @@ You can generate a script to create a database of the desired number of schemas,
                                        # field1:text, field2:int, field3:bigint   
         Table3(email:varchar(50)):10   # Creating `Table3` in `Schema2` with 10 rows in format: email:varchar(50)
     ------------------------------------------------------------------------------------------------------------
-    
+```
 You can set up default schema for all tables without defined schema using `--fields`. The structure is the same 
 for expressing in the generation file - types separated by commas and not mandatory field names before the field type.
 
