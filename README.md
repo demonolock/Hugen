@@ -13,7 +13,7 @@ For example: `--size=9.5GB`
 
 <h5>- Generating by pattern</h5>
 You can generate a script to create a database of the desired number of schemas, tables and rows by using the command:                                    
-`--filepath=generation_schema.txt`
+`--filepath={path_to_file}/generation_schema.txt`
 
 
 
